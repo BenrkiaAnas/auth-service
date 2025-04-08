@@ -23,4 +23,11 @@ mongoose.connect(MONGO_URI)
 // Use auth routes
 app.use('/api/auth', authRoutes);
 
-app.listen(PORT, () => console.log(`Auth Service running on port ${PORT}`));
+// Development
+// app.listen(PORT, () => console.log(`Auth Service running on port ${PORT}`));
+
+
+// Production
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Auth Service running on port ${PORT}`);
+});
