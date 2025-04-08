@@ -10,4 +10,7 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "start"]
+# CMD ["npm", "start"] Development
+# Production
+CMD ["node", "server.js"] 
+
